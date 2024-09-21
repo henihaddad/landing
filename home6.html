@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promptix - Empower Your Enterprise with AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fonts */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff;
+            color: #000;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #000, #333, #666);
+            color: #fff;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease;
+        }
+
+        /* Animations */
+        @keyframes backgroundAnimation {
+            from {
+                background-position: 0% 50%;
+            }
+            to {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .solution {
+            margin-bottom: 60px;
+        }
+
+        .solution h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .solution p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .solution ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .solution ul li {
+            margin-bottom: 10px;
+        }
+
+        .solution ul li::before {
+            content: '•';
+            color: #000;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+        }
+
+        .testimonial {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease;
+        }
+
+        .testimonial blockquote {
+            font-size: 1.5em;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .testimonial cite {
+            font-size: 1em;
+            color: #777;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: #f0f0f0;
+            padding: 60px 20px;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #000;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 1.2em;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .form-group button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .solution h3 {
+                font-size: 1.5em;
+            }
+
+            .testimonial blockquote {
+                font-size: 1.2em;
+            }
+
+            .contact-form h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Promptix</h1>
+        <p>Empower Your Enterprise with AI-Driven Productivity</p>
+    </header>
+
+    <section>
+        <h2>🚀 Boost Your Productivity to New Heights</h2>
+        <div class="solution">
+            <h3>🎓 Enterprise Prompt Engineering Workshops</h3>
+            <p>Unlock the full potential of AI in your organization.</p>
+            <ul>
+                <li>Interactive Sessions: Hands-on workshops tailored to your team's needs.</li>
+                <li>Expert Instructors: Learn from industry leaders in AI and prompt engineering.</li>
+                <li>Immediate Impact: Apply new skills to double your productivity.</li>
+            </ul>
+        </div>
+        <div class="solution">
+            <h3>🤖 All-in-One AI Chatbot Interface</h3>
+            <p>Access the most advanced AI models in one place.</p>
+            <ul>
+                <li>Multiple Models: OpenAI, Gemini, Claude, and open-source options.</li>
+                <li>User-Friendly Interface: Intuitive design for seamless integration.</li>
+                <li>Scalable Solutions: Suitable for teams of all sizes.</li>
+            </ul>
+        </div>
+        <div class="solution">
+            <h3>💼 Flexible Pricing Options</h3>
+            <p>Choose the plan that fits your enterprise.</p>
+            <ul>
+                <li>Pay-As-You-Go: Only pay for what you use.</li>
+                <li>Enterprise Solutions: Customized packages for large organizations.</li>
+                <li>No Hidden Fees: Transparent pricing guaranteed.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <blockquote>"✨ Promptix has revolutionized the way our team works. The workshops were engaging and the AI tools are invaluable."</blockquote>
+            <cite>- Sarah Lee, COO of TechVision</cite>
+        </div>
+        <div class="testimonial">
+            <blockquote>"✨ The seamless integration of various AI models into our workflow has doubled our productivity!"</blockquote>
+            <cite>- Michael Chen, Head of Innovation at FutureEnterprises</cite>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h2>🌟 Ready to Transform Your Enterprise?</h2>
+        <p style="text-align: center;">Don't miss out on the opportunity to elevate your team's productivity.</p>
+        <div class="form-container">
+            <form action="https://formspree.io/f/xzzpqewg" method="POST">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company *</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <!-- Spam Protection -->
+                <input type="text" name="_gotcha" style="display:none">
+                <div class="form-group" style="text-align: center;">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Stay Connected</p>
+        <div class="social-icons">
+            <a href="#" title="Facebook">🌐</a>
+            <a href="#" title="Twitter">🐦</a>
+            <a href="#" title="LinkedIn">💼</a>
+        </div>
+        <p style="margin-top: 20px;">About Promptix</p>
+        <p style="max-width: 600px; margin: 20px auto;">
+            Promptix is dedicated to empowering enterprises through innovative AI solutions. With a focus on prompt engineering and accessibility to top AI models, we help businesses unlock their full potential.
+        </p>
+        <p>© 2023 Promptix. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
