@@ -40,6 +40,11 @@ nav {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-color);
+    transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.logo:hover {
+    color: var(--secondary-color);
 }
 
 nav ul {
@@ -55,7 +60,7 @@ nav ul li a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 400;
-    transition: color 0.3s ease;
+    transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 nav ul li a:hover {
@@ -71,7 +76,7 @@ main {
     color: #ffffff;
     text-align: center;
     padding: 100px 20px;
-    animation: gradientAnimation 10s ease infinite;
+    animation: gradientAnimation 15s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -89,15 +94,11 @@ main {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    animation: fadeInUp 1s ease;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    animation: fadeInUp 1s ease 0.2s;
-    opacity: 0;
-    animation-fill-mode: forwards;
 }
 
 .cta-button {
@@ -108,10 +109,7 @@ main {
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
-    animation: fadeInUp 1s ease 0.4s;
-    opacity: 0;
-    animation-fill-mode: forwards;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .cta-button:hover {
@@ -119,17 +117,6 @@ main {
     color: #ffffff;
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 #features, #about {
@@ -156,13 +143,13 @@ main {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     width: 30%;
     margin-bottom: 2rem;
 }
 
 .feature:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -199,6 +186,22 @@ main {
     color: var(--primary-color);
 }
 
+#contact p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+#contact p a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+#contact p a:hover {
+    color: var(--secondary-color);
+}
+
 #contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -214,6 +217,14 @@ main {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
+    transition: border-color 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus,
+#contact-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
 }
 
 #contact-form textarea {
@@ -228,12 +239,13 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     font-weight: 600;
 }
 
 #contact-form button:hover {
     background-color: var(--secondary-color);
+    transform: translateY(-3px);
 }
 
 footer {
@@ -241,6 +253,125 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 1rem;
+}
+
+/* Animation classes */
+.animate__animated {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+.animate__fadeInRight {
+    animation-name: fadeInRight;
+}
+
+.animate__fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+.animate__slideInDown {
+    animation-name: slideInDown;
+}
+
+.animate__slideInUp {
+    animation-name: slideInUp;
+}
+
+.animate__zoomIn {
+    animation-name: zoomIn;
+}
+
+.animate__pulse {
+    animation-name: pulse;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(50px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translate3d(0, -50px, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translate3d(0, 50px, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.8, 0.8, 0.8);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.animate__delay-1s {
+    animation-delay: 0.5s;
+}
+
+.animate__delay-2s {
+    animation-delay: 1s;
+}
+
+.animate__infinite {
+    animation-iteration-count: infinite;
 }
 
 @media (max-width: 768px) {
