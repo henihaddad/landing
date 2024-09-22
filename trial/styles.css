@@ -14,6 +14,22 @@
     box-sizing: border-box;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.47059;
@@ -69,11 +85,12 @@ nav {
     text-decoration: none;
     font-size: 14px;
     opacity: 0.8;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
     opacity: 1;
+    transform: translateY(-2px);
 }
 
 /* Hero Section */
@@ -81,6 +98,7 @@ nav {
     background-color: var(--light-gray);
     text-align: center;
     padding: 120px 0 60px;
+    animation: fadeIn 1s ease-out;
 }
 
 .hero h1 {
@@ -111,10 +129,13 @@ nav {
     font-weight: 400;
     letter-spacing: -.022em;
     transition: all 0.3s ease;
+    animation: pulse 2s infinite;
 }
 
 .cta-button:hover {
     background-color: #0077ED;
+    animation: none;
+    transform: scale(1.05);
 }
 
 /* Overview Section */
@@ -147,6 +168,15 @@ nav {
     max-width: 980px;
     margin: 0 auto;
 }
+
+.overview-item {
+    animation: slideIn 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.overview-item:nth-child(1) { animation-delay: 0.1s; }
+.overview-item:nth-child(2) { animation-delay: 0.3s; }
+.overview-item:nth-child(3) { animation-delay: 0.5s; }
 
 .overview-item h3 {
     font-size: 24px;
@@ -191,6 +221,12 @@ nav {
     padding: 40px;
     border-radius: 18px;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .feature-item h3 {
@@ -241,6 +277,11 @@ nav {
 .innovation-image {
     width: 50%;
     border-radius: 18px;
+    transition: transform 0.3s ease;
+}
+
+.innovation-image:hover {
+    transform: scale(1.05);
 }
 
 .innovation-text {
@@ -304,6 +345,14 @@ form textarea {
     line-height: 1.23536;
     font-weight: 400;
     letter-spacing: -.022em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.2);
+    outline: none;
 }
 
 form textarea {
@@ -337,11 +386,12 @@ footer {
     font-size: 14px;
     margin-left: 20px;
     opacity: 0.8;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .footer-links a:hover {
     opacity: 1;
+    transform: translateY(-2px);
 }
 
 .footer-bottom {
